@@ -1,0 +1,42 @@
+fixed_coordinate : false
+feature_extract_method: normal
+ground_optimize: # 特征提取
+    lidar:
+        path: /config/lidar.yaml
+    extract_params:
+        #判断地面的角度
+        ground_theta_threshold: 4.0
+        #聚类
+        segment_valid_point_num: 5
+        segment_valid_line_num: 3
+        segment_theta: 60.0
+        #特征点提取的阈值
+        edge_threshold: 0.1
+        surf_threshold: 0.1
+        nearest_feature_search_distance: 8
+    filter:
+        method: voxel_filter   #[voxel, box, no]
+        ## 滤波相关参数
+        voxel_filter: 
+            leaf_size: [0.2, 0.2, 0.2]
+normal: # 特征提取
+    lidar:
+        path: /config/lidar.yaml
+    extract_params:
+        #特征点提取的阈值
+        edge_threshold: 0.1
+        surf_threshold: 0.1
+    filter:
+        method: voxel_filter   #[voxel, box, no]
+        ## 滤波相关参数
+        voxel_filter: 
+            leaf_size: [0.2, 0.2, 0.2]
+
+registration_method: aloam   # # [aloam, fast]选择点云匹配方法，目前只支持这两种，后面继续加
+aloam:
+    distance_square_threshold: 4.0  #icp 查找到对应点时两点距离的最大阈值
+    nearby_scan: 2
+fast:
+    corner_distance_square_threshold: 2.0  
+    surface_distance_square_threshold: 4.0
+#ndt 方法 没写，后面用在写  

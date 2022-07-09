@@ -1,0 +1,33 @@
+#存放路径轨迹,用于外部监控的
+# data_path : ./
+# method_name : "/lego_loam"
+# # method_name : "/fast-lio"
+
+# odom_path_topic : "/path"
+# gnss_frame : "/camera_init"
+
+# need_save_path : false
+
+#fast-lio2
+# data_path : ./
+# method_name : "/fast_lio"
+
+# odom_path_topic : "/path"
+# gnss_frame : "/camera_init"
+
+# need_save_path : true
+
+# yaw : -0.2
+# x_pose : -6
+
+#lego loam
+data_path : ./
+method_name : "/lego_loam"
+
+odom_path_topic : "/after_mapp"
+gnss_frame : "/camera_init"
+
+need_save_path : false
+
+yaw : -90.9
+x_pose : -4.1

@@ -1,0 +1,10 @@
+#-- coding:UTF-8 --
+loam_frame:
+    cloud_topic: /kitti/velo/pointcloud
+    gnss_topic: /kitti/oxts/gps/fix
+    adjust_distort: true
+
+    mapping:
+        mapping_corner_leaf_size: 0.2
+        mapping_surface_leaf_size: 0.3
+

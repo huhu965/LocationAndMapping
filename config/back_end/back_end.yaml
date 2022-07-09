@@ -1,0 +1,3 @@
+optimize_method: g2o
+#存放路径轨迹等
+data_path: ./

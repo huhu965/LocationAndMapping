@@ -1,0 +1,52 @@
+key_frame_distance_threshold: 1.0 # 关键帧距离阈值
+key_frame_theta_threshold: 0.2 # 关键帧角度变换阈值 弧度
+submap_frame_num: 20 #子地图的组成帧数
+feature_extract_method: ground_optimize
+# feature_extract_method: normal
+ground_optimize: # 特征提取
+    lidar:
+        path: /config/lidar.yaml
+    extract_params:
+        ground_theta_threshold: 4.0
+        #地面点分割参数
+        segment_valid_point_num: 5
+        segment_valid_line_num: 3
+        segment_theta: 60.0
+        #特征点提取的阈值
+        edge_threshold: 0.1
+        surf_threshold: 0.1
+        nearest_feature_search_distance: 8
+    filter:
+        method: voxel_filter   #[voxel, box, no]
+        ## 滤波相关参数
+        voxel_filter: 
+            leaf_size: [0.2, 0.2, 0.2]
+
+normal: # 特征提取
+    lidar:
+        path: /config/lidar.yaml
+    extract_params:
+        #特征点提取的阈值
+        edge_threshold: 0.1
+        surf_threshold: 0.1
+    filter:
+        method: voxel_filter   #[voxel, box, no]
+        ## 滤波相关参数
+        voxel_filter: 
+            leaf_size: [0.2, 0.2, 0.2]
+
+registration_method: fast   # [fast]选择点云匹配方法，目前只支持fast，aloam的方法只能用于scan_to_scan
+fast:
+    corner_distance_square_threshold: 2.0 
+    surface_distance_square_threshold: 4.0
+filter1:
+    method: voxel_filter   #[voxel, box, no]
+    ## 滤波相关参数
+    voxel_filter: 
+        leaf_size: [0.2, 0.2, 0.2]
+filter2:
+    method: voxel_filter   #[voxel, box, no]
+    ## 滤波相关参数
+    voxel_filter: 
+        leaf_size: [1.0, 1.0, 1.0]
+#ndt 方法 没写，后面用在写 

@@ -1,0 +1,17 @@
+/*
+ * @Author: Hu Ziwei 
+ * @Description:  定义工作空间路径
+ * @Date: 2021-11-27 14:35:15 
+ * @Last Modified by: Hu Ziwei
+ * @Last Modified time: 2022-04-02 19:33:10
+ */
+
+#ifndef LOAM_FRAME_GLOBAL_DEFINATION_H_IN_
+#define LOAM_FRAME_GLOBAL_DEFINATION_H_IN_
+
+#include <string>
+
+namespace loam_frame {
+const std::string WORK_SPACE_PATH = "@WORK_SPACE_PATH@";
+}
+#endif

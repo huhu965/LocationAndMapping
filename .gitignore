@@ -1,0 +1,11 @@
+*.[oa]
+build/
+__pycache__/
+*.log
+/test
+dist/
+/robot
+*.pdf
+Log/
+third_party/
+slam_data/

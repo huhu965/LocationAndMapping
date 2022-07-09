@@ -1,0 +1,8 @@
+# match_method: scan_to_scan 
+# path: /config/front_end/scan_to_scan.yaml
+
+match_method: scan_to_map 
+path: /config/front_end/scan_to_map.yaml
+
+#存放路径轨迹等
+data_path: ./

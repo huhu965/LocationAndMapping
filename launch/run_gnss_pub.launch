@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="loam_frame"  type="SavePathNode"  name="save_path_node"  output="screen" />
+</launch>

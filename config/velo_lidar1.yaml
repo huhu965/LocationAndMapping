@@ -1,0 +1,8 @@
+# VLP-64
+num_vertical_scans: 64
+num_horizontal_scans: 1800
+ground_scan_index: 30
+vertical_angle_bottom: -24.8          # degrees
+vertical_angle_top: 2              # degrees
+sensor_mount_angle: 0               # degrees
+scan_period: 0.1                    # second
